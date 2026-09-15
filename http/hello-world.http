@@ -1,0 +1,24 @@
+@base_url=http://localhost:8009/v1/hello-world
+
+###
+GET {{base_url}}
+###
+GET {{base_url}}/response-body
+###
+GET {{base_url}}/path/testparam
+###
+GET {{base_url}}/query?name=testquery&age=12
+###
+POST {{base_url}}/payload
+Content-Type: application/json
+
+{
+    "name": "test name",
+    "age": 12
+}
+###
+GET {{base_url}}/logger
+Content-Type: application/json
+###
+GET {{base_url}}/error?code=500
+Content-Type: application/json

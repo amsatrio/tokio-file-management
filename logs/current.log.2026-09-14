@@ -1,0 +1,113 @@
+2026-09-14 21:18:34  INFO tokio_file_management: Server running on http://0.0.0.0:8003
+2026-09-14 21:25:09  INFO tokio_file_management: Server running on http://0.0.0.0:8003
+2026-09-14 21:28:00  INFO tokio_file_management: Server running on http://0.0.0.0:8003
+2026-09-14 21:28:24  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world HTTP/1.1
+2026-09-14 21:28:24  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world -> 200 OK elapsed=0ms
+2026-09-14 21:28:42  INFO tokio_file_management: Server running on http://0.0.0.0:8009
+2026-09-14 21:34:28  INFO tokio_file_management: Server running on http://0.0.0.0:8009
+2026-09-14 21:34:55  INFO tokio_file_management: Server running on http://0.0.0.0:8009
+2026-09-14 21:35:28  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world HTTP/1.1
+2026-09-14 21:35:28  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world -> 200 OK elapsed=0ms
+2026-09-14 21:35:31  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/hello-world/logger HTTP/1.1
+2026-09-14 21:35:31  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/hello-world/logger -> 404 Not Found elapsed=0ms
+2026-09-14 21:35:43  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/logger HTTP/1.1
+2026-09-14 21:35:43  INFO tokio_file_management::modules::hello_world::controller: logger
+2026-09-14 21:35:43  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/logger -> 200 OK elapsed=0ms
+2026-09-14 21:44:30  INFO tokio_file_management: Server running on http://0.0.0.0:8009
+2026-09-14 21:44:36  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:36  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:43  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:43  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:43  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:43  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:44  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:44  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:44  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:44  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:44  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:44  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:44  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:44  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:44  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:44  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:44  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:44  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:45  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:45  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:45  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:45  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:45  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:45  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:45  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:45  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:45  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:45  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:45  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:45  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:46  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:46  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:46  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:46  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:46  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:46  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:46  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:46  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:46  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:46  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:47  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:47  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:47  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:47  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:47  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:47  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:47  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:47  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:47  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:47  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:47  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:47  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:48  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:48  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:48  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:48  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:48  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:48  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:48  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:48  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:48  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:48  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:48  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:48  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:49  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:49  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:44:49  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:44:49  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:45:33  INFO tokio_file_management: Server running on http://0.0.0.0:8009
+2026-09-14 21:45:37  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:45:37  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:45:43  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error HTTP/1.1
+2026-09-14 21:45:43  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error -> 404 Not Found elapsed=0ms
+2026-09-14 21:46:06  INFO tokio_file_management: Server running on http://0.0.0.0:8009
+2026-09-14 21:46:09  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:46:09  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:46:10  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:46:10  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:46:11  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:46:11  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:46:36  INFO tokio_file_management: Server running on http://0.0.0.0:8009
+2026-09-14 21:46:39  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:46:39  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:46:40  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:46:40  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 404 Not Found elapsed=0ms
+2026-09-14 21:47:38  INFO tokio_file_management: Server running on http://0.0.0.0:8009
+2026-09-14 21:47:42  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:47:42  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 500 Internal Server Error elapsed=0ms
+2026-09-14 21:47:48  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=404 HTTP/1.1
+2026-09-14 21:47:48  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=404 -> 404 Not Found elapsed=0ms
+2026-09-14 21:47:52  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-14 21:47:52  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 500 Internal Server Error elapsed=0ms
+2026-09-14 21:49:02  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/health/status HTTP/1.1
+2026-09-14 21:49:02  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/health/status -> 200 OK elapsed=0ms
+2026-09-14 22:40:41  INFO tokio_file_management: Server running on http://0.0.0.0:8009
+2026-09-14 22:40:48  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/query?name=testquery&age=12 HTTP/1.1
+2026-09-14 22:40:48  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/query?name=testquery&age=12 -> 200 OK elapsed=0ms

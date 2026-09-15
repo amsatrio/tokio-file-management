@@ -1,0 +1,30 @@
+@base_url=http://localhost:8009/v1/minio-file
+@id=39b4003b-c563-457c-bd6b-262441ee711d
+
+###
+POST {{base_url}}/upload
+Content-Type: multipart/form-data; boundary="my_boundary"
+
+--my_boundary
+Content-Disposition: form-data; name="file"; filename="tes.jpg"
+Content-Type: image/jpeg
+
+< /home/user0/Pictures/tes.jpg
+--my_boundary--
+
+###
+GET {{base_url}}/download?id={{id}}
+
+###
+PUT {{base_url}}/update?id={{id}}
+Content-Type: multipart/form-data; boundary="my_boundary"
+
+--my_boundary
+Content-Disposition: form-data; name="file"; filename="tes_updated.png"
+Content-Type: image/png
+
+< /home/user0/Pictures/tes.jpg
+--my_boundary--
+
+###
+DELETE {{base_url}}/delete?id={{id}}

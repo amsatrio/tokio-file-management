@@ -1,0 +1,29 @@
+@base_url=http://localhost:8009/v1/file
+
+###
+POST {{base_url}}/upload
+Content-Type: multipart/form-data; boundary="my_boundary"
+
+--my_boundary
+Content-Disposition: form-data; name="file"; filename="tes.jpg"
+Content-Type: image/jpeg
+
+< /home/user0/Pictures/tes.jpg
+--my_boundary--
+
+###
+GET {{base_url}}/download?id=237ce234-e9e3-4f13-9c0f-113ad0c58743
+
+###
+PUT {{base_url}}/update?id=237ce234-e9e3-4f13-9c0f-113ad0c58743
+Content-Type: multipart/form-data; boundary="my_boundary"
+
+--my_boundary
+Content-Disposition: form-data; name="file"; filename="tes_updated.png"
+Content-Type: image/png
+
+< /home/user0/Pictures/tes.jpg
+--my_boundary--
+
+###
+DELETE {{base_url}}/delete?id=237ce234-e9e3-4f13-9c0f-113ad0c58743

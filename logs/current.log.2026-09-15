@@ -1,0 +1,183 @@
+2026-09-15 14:16:17  INFO tokio_file_management: Server running on http://0.0.0.0:8009
+2026-09-15 14:16:31  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world HTTP/1.1
+2026-09-15 14:16:31  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world -> 200 OK elapsed=0ms
+2026-09-15 14:16:31  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/response-body HTTP/1.1
+2026-09-15 14:16:31  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/response-body -> 200 OK elapsed=0ms
+2026-09-15 14:16:31  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/health/status HTTP/1.1
+2026-09-15 14:16:31  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/health/status -> 200 OK elapsed=0ms
+2026-09-15 14:16:31  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=404 HTTP/1.1
+2026-09-15 14:16:31 ERROR tokio_file_management::middleware::error_middleware: [APP ERROR] 404 - Not Found: not found
+2026-09-15 14:16:31  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=404 -> 404 Not Found elapsed=0ms
+2026-09-15 14:16:31  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-15 14:16:31 ERROR tokio_file_management::middleware::error_middleware: [APP ERROR] 500 - Internal Server Error: internal server error
+2026-09-15 14:16:31  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 500 Internal Server Error elapsed=0ms
+2026-09-15 14:16:31  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=400 HTTP/1.1
+2026-09-15 14:16:31 ERROR tokio_file_management::middleware::error_middleware: [APP ERROR] 400 - Bad Request: bad request
+2026-09-15 14:16:31  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=400 -> 400 Bad Request elapsed=0ms
+2026-09-15 14:16:31  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error HTTP/1.1
+2026-09-15 14:16:31 ERROR tokio_file_management::middleware::error_middleware: [APP ERROR] 400 - Bad Request: missing 'code' query parameter
+2026-09-15 14:16:31  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error -> 400 Bad Request elapsed=0ms
+2026-09-15 14:16:31  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/not-exist HTTP/1.1
+2026-09-15 14:16:31  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/not-exist -> 404 Not Found elapsed=0ms
+2026-09-15 14:16:31  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/query?name=test&age=25 HTTP/1.1
+2026-09-15 14:16:31  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/query?name=test&age=25 -> 200 OK elapsed=0ms
+2026-09-15 14:16:31  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/query HTTP/1.1
+2026-09-15 14:16:31 ERROR tokio_file_management::middleware::error_middleware: [APP ERROR] 400 - Bad Request: invalid query param
+2026-09-15 14:16:31  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/query -> 400 Bad Request elapsed=0ms
+2026-09-15 14:16:42  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] POST /v1/hello-world/payload HTTP/1.1
+2026-09-15 14:16:42  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] POST /v1/hello-world/payload -> 200 OK elapsed=0ms
+2026-09-15 14:16:42  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] POST /v1/hello-world/payload HTTP/1.1
+2026-09-15 14:16:42 ERROR tokio_file_management::middleware::error_middleware: [APP ERROR] 400 - Bad Request: invalid payload
+2026-09-15 14:16:42  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] POST /v1/hello-world/payload -> 400 Bad Request elapsed=0ms
+2026-09-15 14:16:42  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/logger HTTP/1.1
+2026-09-15 14:16:42  INFO tokio_file_management::modules::hello_world::controller: logger
+2026-09-15 14:16:42  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/logger -> 200 OK elapsed=0ms
+2026-09-15 14:16:42  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] POST /v1/hello-world/payload HTTP/1.1
+2026-09-15 14:16:42 ERROR tokio_file_management::middleware::error_middleware: [APP ERROR] 400 - Bad Request: invalid payload
+2026-09-15 14:16:42  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] POST /v1/hello-world/payload -> 400 Bad Request elapsed=0ms
+2026-09-15 14:32:35  INFO tokio_file_management: Server running on http://0.0.0.0:8009
+2026-09-15 14:32:45  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/error?code=500 HTTP/1.1
+2026-09-15 14:32:45 ERROR tokio_file_management::middleware::error_middleware: [APP ERROR] 500 - Internal Server Error: internal server error
+2026-09-15 14:32:45  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/error?code=500 -> 500 Internal Server Error elapsed=0ms
+2026-09-15 14:32:54  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/hello-world/logger HTTP/1.1
+2026-09-15 14:32:54  INFO tokio_file_management::modules::hello_world::controller: logger
+2026-09-15 14:32:54  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/hello-world/logger -> 200 OK elapsed=0ms
+2026-09-15 14:33:04  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] POST /v1/hello-world/payload HTTP/1.1
+2026-09-15 14:33:04  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] POST /v1/hello-world/payload -> 200 OK elapsed=0ms
+2026-09-15 14:58:05  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/health/status HTTP/1.1
+2026-09-15 14:58:05  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/health/status -> 200 OK elapsed=0ms
+2026-09-15 14:58:05  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/health/status HTTP/1.1
+2026-09-15 14:58:05  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/health/status -> 200 OK elapsed=0ms
+2026-09-15 14:58:12  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] POST /v1/file/upload HTTP/1.1
+2026-09-15 14:58:12  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] POST /v1/file/upload -> 404 Not Found elapsed=0ms
+2026-09-15 15:04:10  INFO tokio_file_management: Server running on http://0.0.0.0:8009
+2026-09-15 15:04:12  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/health/status HTTP/1.1
+2026-09-15 15:04:12  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/health/status -> 200 OK elapsed=0ms
+2026-09-15 15:04:12  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/health/status HTTP/1.1
+2026-09-15 15:04:12  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/health/status -> 200 OK elapsed=0ms
+2026-09-15 15:04:15  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] POST /v1/file/upload HTTP/1.1
+2026-09-15 15:04:15  INFO tokio_file_management::modules::file::controller: File uploaded: id=3f915b9b-4c9a-4821-9a02-0c67c486d53d, path=3f915b9b-4c9a-4821-9a02-0c67c486d53d.txt, size=36
+2026-09-15 15:04:15  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] POST /v1/file/upload -> 200 OK elapsed=0ms
+2026-09-15 15:04:15  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/file/download?id=3f915b9b-4c9a-4821-9a02-0c67c486d53d HTTP/1.1
+2026-09-15 15:04:15  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/file/download?id=3f915b9b-4c9a-4821-9a02-0c67c486d53d -> 200 OK elapsed=0ms
+2026-09-15 15:04:20  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/file/download?id=nonexistent-id HTTP/1.1
+2026-09-15 15:04:20 ERROR tokio_file_management::middleware::error_middleware: [APP ERROR] 404 - Not Found: file with id 'nonexistent-id' not found
+2026-09-15 15:04:20  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/file/download?id=nonexistent-id -> 404 Not Found elapsed=0ms
+2026-09-15 15:04:20  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] POST /v1/file/upload HTTP/1.1
+2026-09-15 15:04:20 ERROR tokio_file_management::middleware::error_middleware: [APP ERROR] 400 - Bad Request: no file field found in multipart form data
+2026-09-15 15:04:20  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] POST /v1/file/upload -> 400 Bad Request elapsed=0ms
+2026-09-15 15:04:20  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/file/download HTTP/1.1
+2026-09-15 15:04:20 ERROR tokio_file_management::middleware::error_middleware: [APP ERROR] 400 - Bad Request: missing 'id' query parameter
+2026-09-15 15:04:20  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/file/download -> 400 Bad Request elapsed=0ms
+2026-09-15 15:07:44  INFO tokio_file_management: Server running on http://0.0.0.0:8009
+2026-09-15 15:07:53  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] POST /v1/file/upload HTTP/1.1
+2026-09-15 15:07:53  INFO tokio_file_management::modules::file::controller: File uploaded: id=cf52bfd7-bd7a-46cb-a2a7-b392738874a9, path=cf52bfd7-bd7a-46cb-a2a7-b392738874a9.jpg, size=8048
+2026-09-15 15:07:53  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] POST /v1/file/upload -> 200 OK elapsed=1ms
+2026-09-15 15:08:09  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/file/download?id=cf52bfd7-bd7a-46cb-a2a7-b392738874a HTTP/1.1
+2026-09-15 15:08:09 ERROR tokio_file_management::middleware::error_middleware: [APP ERROR] 404 - Not Found: file with id 'cf52bfd7-bd7a-46cb-a2a7-b392738874a' not found
+2026-09-15 15:08:09  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/file/download?id=cf52bfd7-bd7a-46cb-a2a7-b392738874a -> 404 Not Found elapsed=0ms
+2026-09-15 15:08:34  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/file/download?id=cf52bfd7-bd7a-46cb-a2a7-b392738874a9 HTTP/1.1
+2026-09-15 15:08:34  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/file/download?id=cf52bfd7-bd7a-46cb-a2a7-b392738874a9 -> 200 OK elapsed=0ms
+2026-09-15 15:09:03  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/file/download?id=cf52bfd7-bd7a-46cb-a2a7-b392738874a9 HTTP/1.1
+2026-09-15 15:09:03  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/file/download?id=cf52bfd7-bd7a-46cb-a2a7-b392738874a9 -> 200 OK elapsed=0ms
+2026-09-15 16:20:14  INFO tokio_file_management::config::database: Database migrations applied
+2026-09-15 16:20:14  INFO tokio_file_management: Server running on http://0.0.0.0:8009
+2026-09-15 16:20:17  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/health/status HTTP/1.1
+2026-09-15 16:20:17  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/health/status -> 200 OK elapsed=0ms
+2026-09-15 16:20:24  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] POST /v1/file/upload HTTP/1.1
+2026-09-15 16:20:24  INFO tokio_file_management::modules::file::controller: File uploaded: id=f23743cc-7ff0-4e0d-87ed-b1f300e5b0e8
+2026-09-15 16:20:24  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] POST /v1/file/upload -> 200 OK elapsed=14ms
+2026-09-15 16:20:24  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/file/download?id=f23743cc-7ff0-4e0d-87ed-b1f300e5b0e8 HTTP/1.1
+2026-09-15 16:20:24  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/file/download?id=f23743cc-7ff0-4e0d-87ed-b1f300e5b0e8 -> 200 OK elapsed=1ms
+2026-09-15 16:22:15  INFO tokio_file_management::config::database: Database migrations applied
+2026-09-15 16:22:15  INFO tokio_file_management: Server running on http://0.0.0.0:8009
+2026-09-15 16:22:17  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/health/status HTTP/1.1
+2026-09-15 16:22:17  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/health/status -> 200 OK elapsed=0ms
+2026-09-15 16:22:17  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/file/download?id=f23743cc-7ff0-4e0d-87ed-b1f300e5b0e8 HTTP/1.1
+2026-09-15 16:22:17  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/file/download?id=f23743cc-7ff0-4e0d-87ed-b1f300e5b0e8 -> 200 OK elapsed=1ms
+2026-09-15 16:24:32  INFO tokio_file_management::config::database: Database migrations applied
+2026-09-15 16:24:32  INFO tokio_file_management: Server running on http://0.0.0.0:8009
+2026-09-15 16:30:30  INFO tokio_file_management::config::database: Database migrations applied
+2026-09-15 16:30:30  INFO tokio_file_management: Server running on http://0.0.0.0:8009
+2026-09-15 16:36:13  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] POST /v1/file/upload HTTP/1.1
+2026-09-15 16:36:13  INFO tokio_file_management::modules::file::controller: File uploaded: id=237ce234-e9e3-4f13-9c0f-113ad0c58743
+2026-09-15 16:36:13  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] POST /v1/file/upload -> 200 OK elapsed=4ms
+2026-09-15 16:36:30  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/file/download?id=237ce234-e9e3-4f13-9c0f-113ad0c58743 HTTP/1.1
+2026-09-15 16:36:30  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/file/download?id=237ce234-e9e3-4f13-9c0f-113ad0c58743 -> 200 OK elapsed=0ms
+2026-09-15 16:58:49  INFO tokio_file_management::config::database: Database migrations applied
+2026-09-15 16:58:49  INFO tokio_file_management: Server running on http://0.0.0.0:8009
+2026-09-15 16:59:04  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/health/status HTTP/1.1
+2026-09-15 16:59:04  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/health/status -> 200 OK elapsed=0ms
+2026-09-15 16:59:04  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] POST /v1/file/upload HTTP/1.1
+2026-09-15 16:59:04  INFO tokio_file_management::modules::file::controller: File uploaded: id=35089167-3c0c-444c-b021-6d79d0c1a6d9
+2026-09-15 16:59:04  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] POST /v1/file/upload -> 200 OK elapsed=12ms
+2026-09-15 16:59:04  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/file/download?id=35089167-3c0c-444c-b021-6d79d0c1a6d9 HTTP/1.1
+2026-09-15 16:59:04  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/file/download?id=35089167-3c0c-444c-b021-6d79d0c1a6d9 -> 200 OK elapsed=0ms
+2026-09-15 16:59:04  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] PUT /v1/file/update?id=35089167-3c0c-444c-b021-6d79d0c1a6d9 HTTP/1.1
+2026-09-15 16:59:04  INFO tokio_file_management::modules::file::controller: File updated: id=35089167-3c0c-444c-b021-6d79d0c1a6d9
+2026-09-15 16:59:04  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] PUT /v1/file/update?id=35089167-3c0c-444c-b021-6d79d0c1a6d9 -> 200 OK elapsed=3ms
+2026-09-15 16:59:04  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/file/download?id=35089167-3c0c-444c-b021-6d79d0c1a6d9 HTTP/1.1
+2026-09-15 16:59:04  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/file/download?id=35089167-3c0c-444c-b021-6d79d0c1a6d9 -> 200 OK elapsed=0ms
+2026-09-15 16:59:15  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] DELETE /v1/file/delete?id=35089167-3c0c-444c-b021-6d79d0c1a6d9 HTTP/1.1
+2026-09-15 16:59:15  INFO tokio_file_management::modules::file::controller: File deleted: id=35089167-3c0c-444c-b021-6d79d0c1a6d9
+2026-09-15 16:59:15  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] DELETE /v1/file/delete?id=35089167-3c0c-444c-b021-6d79d0c1a6d9 -> 200 OK elapsed=4ms
+2026-09-15 16:59:15  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/file/download?id=35089167-3c0c-444c-b021-6d79d0c1a6d9 HTTP/1.1
+2026-09-15 16:59:15 ERROR tokio_file_management::middleware::error_middleware: [APP ERROR] 404 - Not Found: file with id '35089167-3c0c-444c-b021-6d79d0c1a6d9' not found
+2026-09-15 16:59:15  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/file/download?id=35089167-3c0c-444c-b021-6d79d0c1a6d9 -> 404 Not Found elapsed=0ms
+2026-09-15 16:59:15  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] PUT /v1/file/update?id=does-not-exist HTTP/1.1
+2026-09-15 16:59:15 ERROR tokio_file_management::middleware::error_middleware: [APP ERROR] 404 - Not Found: file with id 'does-not-exist' not found
+2026-09-15 16:59:15  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] PUT /v1/file/update?id=does-not-exist -> 404 Not Found elapsed=0ms
+2026-09-15 16:59:15  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] DELETE /v1/file/delete?id=does-not-exist HTTP/1.1
+2026-09-15 16:59:15 ERROR tokio_file_management::middleware::error_middleware: [APP ERROR] 404 - Not Found: file with id 'does-not-exist' not found
+2026-09-15 16:59:15  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] DELETE /v1/file/delete?id=does-not-exist -> 404 Not Found elapsed=0ms
+2026-09-15 16:59:33  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] PUT /v1/file/update HTTP/1.1
+2026-09-15 16:59:33 ERROR tokio_file_management::middleware::error_middleware: [APP ERROR] 400 - Bad Request: missing 'id' query parameter
+2026-09-15 16:59:33  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] PUT /v1/file/update -> 400 Bad Request elapsed=0ms
+2026-09-15 16:59:33  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] DELETE /v1/file/delete HTTP/1.1
+2026-09-15 16:59:33 ERROR tokio_file_management::middleware::error_middleware: [APP ERROR] 400 - Bad Request: missing 'id' query parameter
+2026-09-15 16:59:33  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] DELETE /v1/file/delete -> 400 Bad Request elapsed=0ms
+2026-09-15 21:09:34  INFO tokio_file_management::config::database: Database migrations applied
+2026-09-15 21:09:34  INFO tokio_file_management: Server running on http://0.0.0.0:8009
+2026-09-15 21:09:54  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] POST /v1/minio-file/upload HTTP/1.1
+2026-09-15 21:09:55  INFO tokio_file_management::modules::minio_file::controller: MinIO bucket 'file-management' created
+2026-09-15 21:09:55  INFO tokio_file_management::modules::minio_file::controller: File uploaded to MinIO: id=d86f42eb-cf58-414e-a415-5471e3364c1e
+2026-09-15 21:09:55  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] POST /v1/minio-file/upload -> 200 OK elapsed=117ms
+2026-09-15 21:10:05  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/minio-file/download?id=d86f42eb-cf58-414e-a415-5471e3364c1e HTTP/1.1
+2026-09-15 21:10:05  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/minio-file/download?id=d86f42eb-cf58-414e-a415-5471e3364c1e -> 200 OK elapsed=39ms
+2026-09-15 21:10:05  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] PUT /v1/minio-file/update?id=d86f42eb-cf58-414e-a415-5471e3364c1e HTTP/1.1
+2026-09-15 21:10:05  INFO tokio_file_management::modules::minio_file::controller: File updated in MinIO: id=d86f42eb-cf58-414e-a415-5471e3364c1e
+2026-09-15 21:10:05  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] PUT /v1/minio-file/update?id=d86f42eb-cf58-414e-a415-5471e3364c1e -> 200 OK elapsed=10ms
+2026-09-15 21:10:05  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/minio-file/download?id=d86f42eb-cf58-414e-a415-5471e3364c1e HTTP/1.1
+2026-09-15 21:10:05  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/minio-file/download?id=d86f42eb-cf58-414e-a415-5471e3364c1e -> 200 OK elapsed=3ms
+2026-09-15 21:10:12  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] DELETE /v1/minio-file/delete?id=d86f42eb-cf58-414e-a415-5471e3364c1e HTTP/1.1
+2026-09-15 21:10:12  INFO tokio_file_management::modules::minio_file::controller: File deleted from MinIO: id=d86f42eb-cf58-414e-a415-5471e3364c1e
+2026-09-15 21:10:12  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] DELETE /v1/minio-file/delete?id=d86f42eb-cf58-414e-a415-5471e3364c1e -> 200 OK elapsed=42ms
+2026-09-15 21:10:12  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/minio-file/download?id=d86f42eb-cf58-414e-a415-5471e3364c1e HTTP/1.1
+2026-09-15 21:10:12 ERROR tokio_file_management::middleware::error_middleware: [APP ERROR] 404 - Not Found: file with id 'd86f42eb-cf58-414e-a415-5471e3364c1e' not found
+2026-09-15 21:10:12  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/minio-file/download?id=d86f42eb-cf58-414e-a415-5471e3364c1e -> 404 Not Found elapsed=1ms
+2026-09-15 21:12:56  INFO tokio_file_management::config::database: Database migrations applied
+2026-09-15 21:12:56  INFO tokio_file_management: Server running on http://0.0.0.0:8009
+2026-09-15 21:13:01  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] POST /v1/minio-file/upload HTTP/1.1
+2026-09-15 21:13:01  INFO tokio_file_management::modules::minio_file::controller: File uploaded to MinIO: id=d8d31f3c-2486-4104-bcdd-5d28415bc12c
+2026-09-15 21:13:01  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] POST /v1/minio-file/upload -> 200 OK elapsed=71ms
+2026-09-15 21:13:33  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/minio-file/download?id=d8d31f3c-2486-4104-bcdd-5d28415bc12c HTTP/1.1
+2026-09-15 21:13:33  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/minio-file/download?id=d8d31f3c-2486-4104-bcdd-5d28415bc12c -> 200 OK elapsed=4ms
+2026-09-15 21:13:35  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] PUT /v1/minio-file/update?id=d8d31f3c-2486-4104-bcdd-5d28415bc12c HTTP/1.1
+2026-09-15 21:13:35  INFO tokio_file_management::modules::minio_file::controller: File updated in MinIO: id=d8d31f3c-2486-4104-bcdd-5d28415bc12c
+2026-09-15 21:13:35  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] PUT /v1/minio-file/update?id=d8d31f3c-2486-4104-bcdd-5d28415bc12c -> 200 OK elapsed=20ms
+2026-09-15 21:13:37  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/minio-file/download?id=d8d31f3c-2486-4104-bcdd-5d28415bc12c HTTP/1.1
+2026-09-15 21:13:37  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/minio-file/download?id=d8d31f3c-2486-4104-bcdd-5d28415bc12c -> 200 OK elapsed=2ms
+2026-09-15 21:13:39  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] PUT /v1/minio-file/update?id=d8d31f3c-2486-4104-bcdd-5d28415bc12c HTTP/1.1
+2026-09-15 21:13:39  INFO tokio_file_management::modules::minio_file::controller: File updated in MinIO: id=d8d31f3c-2486-4104-bcdd-5d28415bc12c
+2026-09-15 21:13:39  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] PUT /v1/minio-file/update?id=d8d31f3c-2486-4104-bcdd-5d28415bc12c -> 200 OK elapsed=17ms
+2026-09-15 21:13:48  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] DELETE /v1/minio-file/delete?id=d8d31f3c-2486-4104-bcdd-5d28415bc12c HTTP/1.1
+2026-09-15 21:13:48  INFO tokio_file_management::modules::minio_file::controller: File deleted from MinIO: id=d8d31f3c-2486-4104-bcdd-5d28415bc12c
+2026-09-15 21:13:48  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] DELETE /v1/minio-file/delete?id=d8d31f3c-2486-4104-bcdd-5d28415bc12c -> 200 OK elapsed=15ms
+2026-09-15 21:13:54  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/minio-file/download?id=d8d31f3c-2486-4104-bcdd-5d28415bc12c HTTP/1.1
+2026-09-15 21:13:54 ERROR tokio_file_management::middleware::error_middleware: [APP ERROR] 404 - Not Found: file with id 'd8d31f3c-2486-4104-bcdd-5d28415bc12c' not found
+2026-09-15 21:13:54  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/minio-file/download?id=d8d31f3c-2486-4104-bcdd-5d28415bc12c -> 404 Not Found elapsed=0ms
+2026-09-15 21:14:08  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] POST /v1/minio-file/upload HTTP/1.1
+2026-09-15 21:14:08  INFO tokio_file_management::modules::minio_file::controller: File uploaded to MinIO: id=39b4003b-c563-457c-bd6b-262441ee711d
+2026-09-15 21:14:08  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] POST /v1/minio-file/upload -> 200 OK elapsed=20ms
+2026-09-15 21:14:39  INFO tokio_file_management::middleware::logger_middleware: [INCOMING] GET /v1/minio-file/download?id=39b4003b-c563-457c-bd6b-262441ee711d HTTP/1.1
+2026-09-15 21:14:39  INFO tokio_file_management::middleware::logger_middleware: [OUTGOING] GET /v1/minio-file/download?id=39b4003b-c563-457c-bd6b-262441ee711d -> 200 OK elapsed=5ms

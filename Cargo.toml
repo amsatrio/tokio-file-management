@@ -1,0 +1,55 @@
+[package]
+name = "tokio-file-management"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+hyper = { version = "1.4", features = ["full"] }
+hyper-util = { version = "0.1", features = ["full"] }
+
+http-body-util = "0.1"
+
+chrono = { version = "0.4", features = ["serde"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+base64 = "0.23"
+regex = "1"
+validator = { version = "0.21", features = ["derive"] }
+
+url = "2.5"
+
+# environment
+lazy_static = "1"
+dotenv = "0.15"
+envy = "0.4"
+
+# log tracing
+log="0.4"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tracing-log = "0.2"
+tracing-appender = "0.2"
+serde_urlencoded = "0.7.1"
+
+# file upload
+multer = "3"
+uuid = { version = "1", features = ["v4"] }
+
+# object storage (MinIO / S3-compatible)
+minio = "0.4"
+
+# database
+bb8 = "0.9.0"
+# diesel-async = { version = "0.6.1", features = ["postgres", "bb8"] }
+diesel = {version = "2.2.12", features = ["r2d2", "mysql", "chrono", "postgres"]}
+diesel_migrations = { version = "2.2.0", features = ["mysql"] }
+
+
+[profile.release]
+opt-level = 3           # Highest optimization level for speed
+# lto = "thin"            # Link-Time Optimization (speeds up execution across crates; use true for max perf)
+lto = "fat"
+codegen-units = 1       # Reduces parallel code generation to enable deeper optimizations (smaller/faster binary)
+panic = "abort"         # Removes unwind stack-tracing logic to shrink binary size
+strip = true            # Strips symbols and debug info automatically from the final binary
