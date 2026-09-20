@@ -27,3 +27,23 @@ Content-Type: image/png
 
 ###
 DELETE {{base_url}}/delete?id=237ce234-e9e3-4f13-9c0f-113ad0c58743
+
+
+
+###
+GET {{base_url}}/pagination?page=0&size=5
+
+###
+GET {{base_url}}/pagination?page=0&size=5&search=tes
+
+###
+GET {{base_url}}/pagination?page=0&size=5&sort=[{"id":"createdAt","desc":true}]
+
+###
+GET {{base_url}}/pagination?page=0&size=5&filter=[{"id":"fileType","value":"IMAGE","matchMode":"EQUALS","dataType":"TEXT"}]
+
+###
+GET {{base_url}}/pagination?page=0&size=5&sort=[{"id":"createdAt","desc":true}]&filter=[{"id":"fileType","value":"IMAGE","matchMode":"EQUALS","dataType":"TEXT"}]
+
+###
+GET {{base_url}}/pagination?page=0&size=5&sort=[{"id":"size","desc":true},{"id":"createdAt","desc":false}]

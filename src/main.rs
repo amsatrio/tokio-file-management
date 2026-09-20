@@ -1,5 +1,4 @@
-use http_body_util::Full;
-use hyper::body::{Bytes, Incoming};
+use hyper::body::Incoming;
 use hyper::server::conn::http1;
 use hyper::service::service_fn;
 use hyper::{Request, Response};
@@ -8,14 +7,14 @@ use tokio::net::TcpListener;
 use tokio_file_management::config::database;
 use tokio_file_management::config::environment::CONFIG;
 use tokio_file_management::config::logger;
-use tokio_file_management::dto::response::app_response;
+use tokio_file_management::dto::response::{app_response, app_response::AppBody};
 use tokio_file_management::middleware::logger_middleware::logging_handler;
 use tokio_file_management::modules::{
     file::router as file_router, health::router as health_router,
     hello_world::router as hello_world_router, minio_file::router as minio_file_router,
 };
 
-async fn route(req: Request<Incoming>) -> Result<Response<Full<Bytes>>, hyper::Error> {
+async fn route(req: Request<Incoming>) -> Result<Response<AppBody>, hyper::Error> {
     let path = req.uri().path().to_owned();
 
     if path.starts_with("/v1/file") {

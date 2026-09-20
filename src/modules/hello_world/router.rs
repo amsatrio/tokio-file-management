@@ -1,16 +1,15 @@
 use std::collections::HashMap;
 
-use http_body_util::Full;
-use hyper::body::{Bytes, Incoming};
+use hyper::body::Incoming;
 use hyper::{Method, Request, Response};
 use url::Url;
 
 use super::controller;
-use crate::dto::response::app_response;
+use crate::dto::response::app_response::{self, AppBody};
 use crate::middleware::error_middleware::error_handler_with_fallback;
 use crate::modules::hello_world::schema::{self, AppError};
 
-pub async fn handle_request(req: Request<Incoming>) -> Result<Response<Full<Bytes>>, hyper::Error> {
+pub async fn handle_request(req: Request<Incoming>) -> Result<Response<AppBody>, hyper::Error> {
     let method = req.method().clone();
     let uri = req.uri().clone();
     let path = uri.path();

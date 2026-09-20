@@ -1,17 +1,18 @@
 use std::time::Instant;
 
-use http_body_util::Full;
-use hyper::body::{Bytes, Incoming};
+use hyper::body::Incoming;
 use hyper::{Request, Response};
 use log::Level;
+
+use crate::dto::response::app_response::AppBody;
 
 pub async fn logging_handler<F, Fut>(
     req: Request<Incoming>,
     handler: F,
-) -> Result<Response<Full<Bytes>>, hyper::Error>
+) -> Result<Response<AppBody>, hyper::Error>
 where
     F: FnOnce(Request<Incoming>) -> Fut,
-    Fut: std::future::Future<Output = Result<Response<Full<Bytes>>, hyper::Error>>,
+    Fut: std::future::Future<Output = Result<Response<AppBody>, hyper::Error>>,
 {
     let method = req.method().clone();
     let uri = req.uri().clone();
@@ -68,7 +69,7 @@ fn log_request(
 fn log_response(
     method: &hyper::Method,
     uri: &hyper::Uri,
-    resp: &Response<Full<Bytes>>,
+    resp: &Response<AppBody>,
     elapsed: std::time::Duration,
 ) {
     let status = resp.status();

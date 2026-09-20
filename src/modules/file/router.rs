@@ -1,12 +1,11 @@
-use http_body_util::Full;
-use hyper::body::{Bytes, Incoming};
+use hyper::body::Incoming;
 use hyper::{Method, Request, Response};
 
 use super::controller;
-use crate::dto::response::app_response;
+use crate::dto::response::app_response::{self, AppBody};
 use crate::middleware::error_middleware::error_handler_with_fallback;
 
-pub async fn handle_request(req: Request<Incoming>) -> Result<Response<Full<Bytes>>, hyper::Error> {
+pub async fn handle_request(req: Request<Incoming>) -> Result<Response<AppBody>, hyper::Error> {
     let method = req.method().clone();
     let path = req.uri().path().to_owned();
 
@@ -35,6 +34,20 @@ pub async fn handle_request(req: Request<Incoming>) -> Result<Response<Full<Byte
         (Method::GET, "/v1/file/download") => {
             return error_handler_with_fallback(req, |_req| async move {
                 controller::download(_req).await
+            })
+            .await;
+        }
+
+        (Method::GET, "/v1/file/stream") => {
+            return error_handler_with_fallback(req, |_req| async move {
+                controller::stream(_req).await
+            })
+            .await;
+        }
+
+        (Method::GET, "/v1/file/pagination") => {
+            return error_handler_with_fallback(req, |_req| async move {
+                controller::pagination(_req).await
             })
             .await;
         }

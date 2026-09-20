@@ -1,10 +1,9 @@
 use std::fmt;
 
-use http_body_util::Full;
-use hyper::{Response, StatusCode, body::Bytes};
+use hyper::{Response, StatusCode};
 use serde::{Deserialize, Serialize};
 
-use crate::dto::response::app_response;
+use crate::dto::response::app_response::{self, AppBody};
 
 #[derive(Deserialize, Serialize)]
 pub struct Params {
@@ -66,7 +65,7 @@ impl AppError {
         }
     }
 
-    pub fn to_response(&self) -> Response<Full<Bytes>> {
+    pub fn to_response(&self) -> Response<AppBody> {
         app_response::error(self.status_code(), &self.message().to_string())
     }
 }
